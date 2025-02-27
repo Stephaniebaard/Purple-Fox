@@ -1,9 +1,11 @@
 import Button from "../../components/buttons/Buttons";
+import "./envelope.scss";
 
 export default function () {
     return (
 <div className="EnvelopeBox">
- <img src="../../../images/Envelope.png" alt="Envelope" /> 
+ <img className="EnvelopeImage" src="../../../images/Envelope.png" alt="Envelope" /> 
+ <div className="ButtonBox">
 <Button
         title="Open" handleClick={function (): void {
             throw new Error("Function not implemented.");
@@ -12,6 +14,7 @@ export default function () {
         title="Throw away" handleClick={function (): void {
             throw new Error("Function not implemented.");
         } }/>
+        </div>
 </div>
 );
 }
