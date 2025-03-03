@@ -1,12 +1,12 @@
 
 import "./App.scss";
-import EnvelopeBox from "./widgets/envelope/envelope";
+import ButtonMove from "./widgets/envelope/envelope";
 
 
 function App() {
   return (
     <>
-    <EnvelopeBox/>
+    <ButtonMove/>
     </>
   );
 }
