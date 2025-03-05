@@ -16,4 +16,8 @@
 .ButtonBox{
     display: flex;
     gap: 50px;
+
+    button {
+        display: flex;
+    }
 }

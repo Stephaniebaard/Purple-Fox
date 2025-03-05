@@ -25,7 +25,7 @@ const ButtonMove: React.FC = () => {
 <Button
         title="Open" 
         handleClick={() => {}}
-        style={{ position: 'absolute', left: '10%', top: '40%' }}
+        style={{ position: 'absolute', left: '50%', top: '50%' }}
         />
 <Button
         title="Throw away" 
