@@ -12,29 +12,35 @@ const ButtonMove: React.FC = () => {
     ];
 
     const [positionIndex, setPositionIndex] = useState(0);
+    const [isClicked, setIsClicked] = useState(false);
+
 
     const moveButton = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setIsClicked(true);
         setPositionIndex((prevIndex)=>(prevIndex + 1) % positions.length);
     };
 
 
     return (
 <div style={{ position: 'relative', width: '100vw', height: '100vh' }} className="EnvelopeBox">
- <img className="EnvelopeImage" src="../../../images/Envelope.png" alt="Envelope" /> 
+ <img className="EnvelopeImage" src="../../../images/envelope2.png" alt="Envelope" /> 
  <div className="ButtonBox">
 <Button
         title="Open" 
         handleClick={() => {}}
-        style={{ position: 'absolute', left: '10%', top: '40%' }}
+        className="OpenEnvelopeButton"
         />
-<Button
-        title="Throw away" 
+ <Button
+        title="Throw away"
         handleClick={moveButton}
-        style= {{
-            position: 'absolute', 
-            ...positions[positionIndex], 
-            transition: 'top 0,5s, left 0,5s',}}
-        />
+        style={isClicked ? {
+            position: 'absolute',
+            top: positions[positionIndex].top,
+            left: positions[positionIndex].left,
+            transition: 'top 0.5s, left 0.5s',
+        } : {}}
+        className="ThrowAwayEnvelopeButton"
+                />
         </div>
 </div>
 );
