@@ -5,8 +5,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw; /* Se till att boxen täcker hela bredden av skärmen */
-    height: 100vh; 
+    max-width: fit-content;
+    gap: 20px;
 }
 
 .EnvelopeImage{
@@ -17,8 +17,15 @@
 
 .ButtonBox{
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-    width: 100%; /* Se till att knapparna använder hela bredden av sin förälder */
-    align-items: center
+    width: 600px;
+    justify-content: space-between;
+    gap: 20px;
+
+    .OpenEnvelopeButton {
+        flex-grow: 1;
+    }
+
+    .ThrowAwayEnvelopeButton {
+        flex-grow: 1;
+    }
 }
