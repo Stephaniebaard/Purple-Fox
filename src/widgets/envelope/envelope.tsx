@@ -1,4 +1,5 @@
 import Button from "../../components/buttons/Buttons";
+import Menu from "../meny/meny";
 import "./envelope.scss";
 import React, {useState} from "react";
 
@@ -13,6 +14,7 @@ const ButtonMove: React.FC = () => {
 
     const [positionIndex, setPositionIndex] = useState(0);
     const [isClicked, setIsClicked] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // State för att kontrollera om menyn är öppen
 
 
     const moveButton = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -20,6 +22,13 @@ const ButtonMove: React.FC = () => {
         setPositionIndex((prevIndex)=>(prevIndex + 1) % positions.length);
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen); // Växla menyns visibilitet
+      };
+    
+      const handleMenuButtonClick = (buttonName: string) => {
+        console.log(`Clicked on ${buttonName}`); // Hantera knapptryck från menyn
+      };
 
     return (
 <div style={{ position: 'relative', width: '100vw', height: '100vh' }} className="EnvelopeBox">
@@ -27,9 +36,14 @@ const ButtonMove: React.FC = () => {
  <div className="ButtonBox">
 <Button
         title="Open" 
-        handleClick={() => {}}
+        handleClick={toggleMenu} // Hantera öppning/stängning av menyn
         className="OpenEnvelopeButton"
         />
+         {/* Visa menyn om isMenuOpen är true */}
+         {isMenuOpen && (
+          <Menu onButtonClick={handleMenuButtonClick} />
+        )}
+
  <Button
         title="Throw away"
         handleClick={moveButton}
