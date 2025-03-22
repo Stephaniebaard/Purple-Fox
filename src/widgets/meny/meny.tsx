@@ -8,10 +8,10 @@ type MenuProps = {
   const Menu: React.FC<MenuProps> = ({ onButtonClick }) => {
     return (
       <div className="Menu">
-        <Button title="Button 1" handleClick={() => onButtonClick('Button 1')} className="MenuButton" />
-        <Button title="Button 2" handleClick={() => onButtonClick('Button 2')} className="MenuButton" />
-        <Button title="Button 3" handleClick={() => onButtonClick('Button 3')} className="MenuButton" />
-        <Button title="Button 4" handleClick={() => onButtonClick('Button 4')} className="MenuButton" />
+        <Button title="Flower Shop"  handleClick={() => onButtonClick('Button 1')} className="MenuButton"  altText="Flower" imageSrc="../../../images/Flower.png"/>
+        <Button title="Letter" handleClick={() => onButtonClick('Button 2')} className="MenuButton" altText="Envelope" imageSrc="../../../images/EnvelopeOpen.png"/>
+        <Button title="Jokes" handleClick={() => onButtonClick('Button 3')} className="MenuButton" altText="Heart" imageSrc="../../../images/Heart.png"/>
+        <Button title="Playlist" handleClick={() => onButtonClick('Button 4')} className="MenuButton" altText="Notes" imageSrc="../../../images/MusicNote2.png"/>
       </div>
     );
   };

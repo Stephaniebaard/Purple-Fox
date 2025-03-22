@@ -10,3 +10,9 @@
 .MenuButton{
     @include Mixins.buttons;
 }
+
+.ButtonIcon{
+    width: 60px;
+    height: auto;
+    image-rendering: pixelated;
+}

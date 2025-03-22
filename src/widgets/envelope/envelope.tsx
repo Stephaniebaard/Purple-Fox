@@ -38,6 +38,9 @@ const ButtonMove: React.FC = () => {
         title="Open" 
         handleClick={toggleMenu} // Hantera öppning/stängning av menyn
         className="OpenEnvelopeButton"
+        altText=""
+        imageSrc=""
+
         />
          {/* Visa menyn om isMenuOpen är true */}
          {isMenuOpen && (
@@ -46,6 +49,8 @@ const ButtonMove: React.FC = () => {
 
  <Button
         title="Throw away"
+         altText=""
+        imageSrc=""
         handleClick={moveButton}
         style={isClicked ? {
             position: 'absolute',
