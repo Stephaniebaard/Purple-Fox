@@ -8,7 +8,19 @@
 }
 
 .MenuButton{
-    @include Mixins.buttons;
+    background-color:rgba(210, 213, 246, 1);
+    border-radius: 5px;
+    border: 5px solid rgba(133, 136, 183, 1);
+    box-shadow: 4px 4px 4px rgb(91, 93, 129);;
+    color:rgb(91, 93, 129);
+    font-family: 'Paytone one', sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 5px 35px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+  
 }
 
 .ButtonIcon{
