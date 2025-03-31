@@ -3,13 +3,16 @@ import "./App.scss";
 import HomePage from "./routes/HomePage";
 import MenuPage from "./routes/MenuPage";
 
+const onButtonClick = () => {
+  console.log("Button clicked!");
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
-		element: <RootLayout />,
 		children: [
 			{ index: true, element: <HomePage /> },
-			{ path: "menu", element: <MenuPage /> },
+			{ path: "menu", element: <MenuPage onButtonClick={onButtonClick} /> },
     ],
   }
 ]);
