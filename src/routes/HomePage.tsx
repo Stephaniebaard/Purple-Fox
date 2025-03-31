@@ -21,9 +21,8 @@ const HomePage: React.FC = () => {
         setIsClicked(true);
         setPositionIndex((prevIndex)=>(prevIndex + 1) % positions.length);
     };
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen); // Växla menyns visibilitet
+     const toggleMenu = () => {
+      setIsMenuOpen((prevState) => !prevState);// Växla menyns visibilitet
       };
       
       const handleMenuButtonClick = (buttonName: string) => {
@@ -32,12 +31,13 @@ const HomePage: React.FC = () => {
 
     return (
 <div style={{ position: 'relative', width: '100vw', height: '100vh' }} className="EnvelopeBox">
- <img className="EnvelopeImage" src="../../../images/envelope2.png" alt="Envelope" /> 
+ <img className={`EnvelopeImage ${isMenuOpen ? 'hidden' : ''}`} src="../../../images/envelope2.png" alt="Envelope" /> 
+ 
  <div className="ButtonBox">
 <Button
         title="Open" 
         handleClick={toggleMenu} // Hantera öppning/stängning av menyn
-        className="OpenEnvelopeButton"
+        className={`OpenEnvelopeButton ${isMenuOpen ? "hidden" : ""}`}
         altText=""
         imageSrc=""
 
@@ -59,10 +59,11 @@ const HomePage: React.FC = () => {
             left: positions[positionIndex].left,
             transition: 'top 0.5s, left 0.5s',
         } : {}}
-        className="ThrowAwayEnvelopeButton"
+        className={`ThrowAwayEnvelopeButton ${isMenuOpen ? "hidden" : ""}`}
                 />
         </div>
-</div>
+ 
+        </div>
 );
 };
 
