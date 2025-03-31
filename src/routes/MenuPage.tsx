@@ -8,9 +8,13 @@ type MenuProps = {
   const Menu: React.FC<MenuProps> = ({ onButtonClick }) => {
     return (
       <div className="Menu">
-        <Button title="Flower Shop"  handleClick={() => onButtonClick('Button 1')} className="MenuButton"  altText="Flower" imageSrc="../../../images/Flower.png"/>
+         <div className="Title">
+         <img className="LetterIcon" src="../../../images/FourLetters.png" alt="LetterIcon" />
+         <h1>You've got mail</h1>
+         </div>
+        <Button title="Flower Shop"  handleClick={() => onButtonClick('Button 1')} className="MenuButton"  altText="Flower" imageSrc="../../../images/FlowerBigger.png"/>
         <Button title="Letter" handleClick={() => onButtonClick('Button 2')} className="MenuButton" altText="Envelope" imageSrc="../../../images/EnvelopeOpen.png"/>
-        <Button title="Jokes" handleClick={() => onButtonClick('Button 3')} className="MenuButton" altText="Heart" imageSrc="../../../images/Heart.png"/>
+        <Button title="Jokes" handleClick={() => onButtonClick('Button 3')} className="MenuButton" altText="Heart" imageSrc="../../../images/BigHeart - kopia.png"/>
         <Button title="Playlist" handleClick={() => onButtonClick('Button 4')} className="MenuButton" altText="Notes" imageSrc="../../../images/MusicNote2.png"/>
       </div>
     );
