@@ -1,14 +1,23 @@
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.scss";
-import ButtonMove from "./widgets/envelope/envelope";
+import HomePage from "./routes/HomePage";
+import MenuPage from "./routes/MenuPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+		element: <RootLayout />,
+		children: [
+			{ index: true, element: <HomePage /> },
+			{ path: "menu", element: <MenuPage /> },
+    ],
+  }
+]);
+
 
 
 function App() {
-  return (
-    <>
-    <ButtonMove/>
-    </>
-  );
+    return <RouterProvider router={router} />;
 }
 
 
