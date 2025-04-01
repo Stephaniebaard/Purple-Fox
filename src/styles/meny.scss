@@ -6,8 +6,11 @@
     flex-direction: column;
     gap: 20px;
     width: 600px;
-    height: 400px;
+    height: 530px;
     box-shadow: 4px 4px 4px rgb(141, 143, 179);
+    justify-content: center; /* Center buttons vertically */
+    align-items: center;     /* Center buttons horizontally */
+
 }
 
 .LetterIcon{
@@ -24,9 +27,17 @@
     font-weight: bold;
     font-size: large;
     color: rgba(231, 234, 251, 1);
+    align-items: center;
+}
+
+.Title h1{
+    margin: 0;
+    width: 500px;
+    height: auto;
 }
 
 .MenuButton{
+    
     background-color:rgba(210, 213, 246, 1);
     border-radius: 5px;
     border: 5px solid rgba(133, 136, 183, 1);
@@ -39,11 +50,14 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    width: 580px;
+    height: 70px;
   
 }
 
 .ButtonIcon{
-    width: 85px;
+    width: 65px;
     height: auto;
     image-rendering: pixelated;
 }
